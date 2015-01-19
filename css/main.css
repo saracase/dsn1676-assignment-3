@@ -16,3 +16,48 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
+
+body {
+    background-color: black;
+    background-image: url(../images/stars.svg)
+}
+
+.asteriod {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    animation: asteriod-rotate 10s ease-in-out infinite alternate;
+}
+
+@keyframes asteriod-rotate {
+    
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
+.ship {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 400px;
+    right: 200px;
+    animation: ship-rotate 10s ease-in-out infinite alternate;
+}
+
+@keyframes ship-rotate {
+    
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
