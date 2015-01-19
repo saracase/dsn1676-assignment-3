@@ -73,7 +73,7 @@ body {
     background-image: url(../images/stars.svg);
     width: 100%;
     height: 100vh;
-    animation: stars 5s ease-in-out infinite;
+    animation: stars 5s ease-in-out infinite alternate;
 }
 
 @keyframes stars {
