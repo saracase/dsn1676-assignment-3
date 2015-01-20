@@ -26,64 +26,59 @@ body {
     top: 100px;
     left: 100px;
     width: 200px;
+    -webkit-animation: asteroid-rotate 10s ease-in-out infinite alternate;
     animation: asteroid-rotate 10s ease-in-out infinite alternate;
 }
 
-@keyframes asteroid-rotate {
-    
-    0% {
-        transform: rotate(0deg);
-    }
-    
-    100% {
-        transform: rotate(360deg);
-    }
-    
+@-webkit-keyframes asteroid-rotate {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }   
 }
+
+@keyframes asteroid-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }   
+}
+
 
 .ship {
     position: absolute;
     width: 150px;
     top: 50%;
     left: 50%;
+    -webkit-animation: ship-fly 10s ease-in-out infinite alternate;
     animation: ship-fly 10s ease-in-out infinite alternate;
 }
 
+@-webkit-keyframes ship-fly {
+    0% { -webkit-transform: translateY(0); }
+    50% { -webkit-transform: translateX(-100px); }
+    70% { -webkit-transform: translateY(-60px); } 
+    40% { -webkit-transform: translateY(50px); }
+}
+
+
 @keyframes ship-fly {
-    
-    0% {
-        transform: translateY(0);
-    }
-    
-     50% {
-        transform: translateX(-100px);
-    }
-    
-     70% {
-        transform: translateY(-60px);
-    }
-      
-     40% {
-        transform: translateY(50px);
-    }
-    
+    0% { transform: translateY(0); }
+    50% { transform: translateX(-100px); }
+    70% { transform: translateY(-60px); } 
+    40% { transform: translateY(50px); }
 }
 
 .stars {
     background-image: url(../images/stars.svg);
     width: 100%;
     height: 100vh;
+    -webkit-animation: stars 5s ease-in-out infinite alternate;
     animation: stars 5s ease-in-out infinite alternate;
 }
 
+@-webkit-keyframes stars {
+    0% { -webkit-transform: scale(1); }
+    100% { -webkit-transform: scale(1.5); } 
+}
+
 @keyframes stars {
-    
-    0% {
-        transform: scale(1);
-    }
-    
-     100% {
-        transform: scale(1.5);
-    }
-    
+    0% { transform: scale(1); }
+    100% { transform: scale(1.5); } 
 }
